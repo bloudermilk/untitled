@@ -17,4 +17,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "tilt", "~> 1.3.3"
   gem.add_dependency "rack", "~> 1.4.1"
+  gem.add_dependency "sprockets", "~> 2.3.1"
 end
