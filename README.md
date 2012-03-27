@@ -10,7 +10,7 @@ Sprockets) to create rich web applications with ease.
 $ gem install untitled
 ```
 
-## Usage
+## Getting started
 
 The fastest way to get started is to create a bare-bones app:
 
@@ -64,6 +64,18 @@ gem "haml", "~> 3.1.3"
 gem "coffee-script", "~> 2.2.0"
 gem "sass", "~> 3.1.15"
 ```
+
+## Layouts
+
+## Helper Methods
+
+## Templating Support
+
+## Transpiler Support
+
+## Deployment
+
+## Security
 
 
 ## Contributing
