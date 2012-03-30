@@ -1,8 +1,8 @@
 # Untitled
 
 Untitled is a general-purpose static site generator. It allows you to use your
-favorite Ruby templating languages (via Tilt) and asset transpilers (via
-Sprockets) to create rich web applications with ease.
+favorite Ruby templating languages (eg. HAML) and asset transpilers (eg. SASS)
+to create rich web applications with ease.
 
 ## Installation
 
@@ -21,15 +21,27 @@ $ untitled new my_app
 Which will create a project folder with the following file structure:
 
 ```
-my_app
+.
 ├── Gemfile
-├── assets
-│   ├── css
-│   │   └── screen.css
-│   └── js
-│       └── foo.js
+├── app
+│   ├── assets
+│   │   ├── javascripts
+│   │   │   └── app.js.coffee.erb
+│   │   └── stylesheets
+│   │       └── app.css.scss
+│   ├── includes
+│   ├── layouts
+│   │   └── default.html.erb
+│   ├── pages
+│   │   └── index.html.erb
+│   └── public
+│       └── humans.txt
 ├── config.ru
-└── index.html
+├── config.yml
+└── vendor
+    └── assets
+        ├── javascripts
+        └── stylesheets
 ```
 
 If you already know which templating language(s) and/or transpiler(s) you'd like
@@ -42,15 +54,28 @@ $ untitled new -s haml,coffee,scss my_app
 This will add a little sugar to your application's file structure...
 
 ```
-my_app
+.
 ├── Gemfile
-├── assets
-│   ├── css
-│   │   └── screen.css.scss
-│   └── js
-│       └── foo.js.coffee
+├── Gemfile.lock
+├── app
+│   ├── assets
+│   │   ├── javascripts
+│   │   │   └── app.js.coffee.erb
+│   │   └── stylesheets
+│   │       └── app.css.scss
+│   ├── includes
+│   ├── layouts
+│   │   └── default.html.erb
+│   ├── pages
+│   │   └── index.html.erb
+│   └── public
+│       └── humans.txt
 ├── config.ru
-└── index.html.haml
+├── config.yml
+└── vendor
+    └── assets
+        ├── javascripts
+        └── stylesheets
 ```
 
 ...and automatically add the necessary gem dependencies to your `Gemfile`:
