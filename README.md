@@ -94,7 +94,8 @@ gem "sass", "~> 3.1.15"
 ## YAML Front Matter
 
 Untitled uses YAML Front Matter to configure the behaviour of your static pages
-(inspired by [jekyll][jekyll]). An page with Front Matter looks like this:
+(<strike>inspired</strike> stolen from [jekyll][jekyll]). An page with Front
+Matter looks like this:
 
 ```
 ---
