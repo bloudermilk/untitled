@@ -26,12 +26,12 @@ Which will create a project folder with the following file structure:
 ├── app
 │   ├── assets
 │   │   ├── javascripts
-│   │   │   └── app.js.coffee.erb
+│   │   │   └── application.js
 │   │   └── stylesheets
-│   │       └── app.css.scss
+│   │       └── application.css
 │   ├── includes
 │   ├── layouts
-│   │   └── default.html.erb
+│   │   └── application.html.erb
 │   ├── pages
 │   │   └── index.html.erb
 │   └── public
@@ -44,8 +44,9 @@ Which will create a project folder with the following file structure:
         └── stylesheets
 ```
 
-If you already know which templating language(s) and/or transpiler(s) you'd like
-to use, simply specify them when creating your app:
+Untitled initializes your app with the erb templating system by default. If you
+want to use a different templating system or a JS/CSS transpiler you can specify
+them when you initiailize your app like so:
 
 ```
 $ untitled new -s haml,coffee,scss my_app
@@ -60,14 +61,14 @@ This will add a little sugar to your application's file structure...
 ├── app
 │   ├── assets
 │   │   ├── javascripts
-│   │   │   └── app.js.coffee.erb
+│   │   │   └── application.js.coffee
 │   │   └── stylesheets
-│   │       └── app.css.scss
+│   │       └── application.css.scss
 │   ├── includes
 │   ├── layouts
-│   │   └── default.html.erb
+│   │   └── application.html.haml
 │   ├── pages
-│   │   └── index.html.erb
+│   │   └── index.html.haml
 │   └── public
 │       └── humans.txt
 ├── config.ru
@@ -90,24 +91,58 @@ gem "coffee-script", "~> 2.2.0"
 gem "sass", "~> 3.1.15"
 ```
 
+## YAML Front Matter
+
+Untitled uses YAML Front Matter to configure the behaviour of your static pages
+(inspired by [jekyll][jekyll]). An page with Front Matter looks like this:
+
+```
+---
+some_option: lolcat
+---
+
+<h1>This is fun!</h1>
+```
+
+[jekyll]: http://jekyllrb.com/
+
 ## Layouts
+
+By default, Untitled will use a layout called `application`. You can specify
+an alternate layout to use with the `layout` option:
+
+```
+---
+layout: admin
+---
+
+<h1>Welcome to the admin section</h1>
+```
 
 ## Helper Methods
 
-## Templating Support
+Coming soon...
 
-## Transpiler Support
+## Template and Transpiler Support
+
+Untitled supports any template or transpiler that [Tilt][tilt] supports.
+
+[tilt]: https://github.com/rtomayko/tilt
 
 ## Deployment
 
+Coming soon...
+
 ## Security
+
+Coming soon...
 
 
 ## Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Rebase the master branch (`git pull origin master --rebase`)
+3. Commit your changes (`git commit -am 'Added some awesome'`)
+4. Rebase the master branch (`git pull upstream master --rebase`)
 5. Push to the feature branch (`git push origin my-new-feature`)
 6. Create new Pull Request
