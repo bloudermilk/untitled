@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require 'rubygems' rescue LoadError
+$:.unshift(File.expand_path(File.dirname(__FILE__) + '/../lib'))
+
+require 'untitled/command'
+
+args = ARGV.dup
+ARGV.clear
+command = args.shift.strip rescue 'help'
+
+Untitled::Command.run(command, args)

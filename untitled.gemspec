@@ -3,9 +3,9 @@ require File.expand_path('../lib/untitled/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Brendan Loudermilk"]
-  gem.email         = ["brendan@gophilosophie.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.email         = ["bloudermilk@gmail.com"]
+  gem.description   = %q{LOL}
+  gem.summary       = %q{LOL}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
@@ -17,5 +17,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "tilt", "~> 1.3.3"
   gem.add_dependency "rack", "~> 1.4.1"
-  gem.add_dependency "sprockets", "~> 2.3.1"
+  gem.add_dependency "sprockets", "~> 2.6.0"
 end
