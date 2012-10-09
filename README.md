@@ -4,6 +4,12 @@ Untitled is a general-purpose static site generator. It allows you to use your
 favorite Ruby templating languages (eg. HAML) and asset transpilers (eg. SASS)
 to create rich web applications with ease.
 
+**WARNING:** This library doesn't implement any of the features it claims to.
+Shortly after beginning development I found [Middlemman](middleman), which is a
+stable and feature-complete gem that does the exact same thing.
+
+[middleman]: http://middlemanapp.com
+
 ## Installation
 
 ```
